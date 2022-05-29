@@ -216,11 +216,11 @@ namespace fram {
         wh2 = pins.spiWrite(255)
         wh3 = pins.spiWrite(255)
         pins.digitalWritePin(DigitalPin.P9, 1)
-        //serial.writeString("WHOAMI: " + ("" + whoami) + " wh0:" + ("" + wh0) + " wh1:" + ("" + wh1) + " wh2:" + ("" + wh2) + " wh3:" + ("" + wh3) + "\n")
+        serial.writeString("WHOAMI: " + ("" + whoami) + " wh0:" + ("" + wh0) + " wh1:" + ("" + wh1) + " wh2:" + ("" + wh2) + " wh3:" + ("" + wh3) + "\n")
         if (wh1 == 127) {
-            //serial.writeString("FRAM Connected\n")
+            serial.writeString("FRAM Connected\n")
         } else {
-            //serial.writeString("ERR: FRAM not Connected\n")
+            serial.writeString("ERR: FRAM not Connected\n")
         }
     }
     //% blockId=fram_writeenable block="fram|write enable"
